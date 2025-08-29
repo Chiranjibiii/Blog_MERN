@@ -1,6 +1,8 @@
 import React from "react";
 
-function Card() {
+function Card({blog}) {
+
+
   return (
     <div
       className="max-w-sm rounded overflow-hidden shadow-lg"
@@ -8,15 +10,13 @@ function Card() {
     >
       <img
         className="w-full"
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfJ5hSkM1pGC5I_gTNx-Bmpyb0QrwWm-TwiARKclttVPrZrIKfr0bTHyP0afaIHL7zks-AbODA7zAf9LYhKdKVM6s2YXB8jkFl-fWBTmse2y6O68grQjw6tOOMrtdsG1qkVOwRT05R5XVZIoRoJFsn_wUqkrABJwEGZN0Q0OZlLZxis2zkhOH2u1RI_dNd/s518/colobus.jpg"
+        src={`http://localhost:5000/${blog.image}`}
         alt="Sunset in the mountains"
       />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Monkey</div>
+        <div className="font-bold text-xl mb-2">{blog.title}</div>
         <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem
-          praesentium nihil.
+          {blog.description}
         </p>
         <br />
         <a
